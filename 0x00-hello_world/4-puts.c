@@ -2,7 +2,7 @@
 /**
  * main - entry point
  * print message
- * return: success
+ * Return: success
  */
 int main(void)
 {

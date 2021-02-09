@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
 * _abs - absolute value of an integer
 * @c : parameter

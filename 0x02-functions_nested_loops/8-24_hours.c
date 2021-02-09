@@ -1,21 +1,25 @@
 #include "holberton.h"
+
 /**
-* void jack_bauer - minute of the day of jack bauer
-* Return: success
-*/
+ * jack_bauer - define is a character is alphabetic
+ *
+ * Return: - (void)
+ */
 void jack_bauer(void)
 {
-	int x;
-	int e;
+int h, m;
 
-	for (x = '0'; x <= '24'; ++x)
-	{
-	for (e = '0'; e <= '59'; ++e)
-	{
-	_putchar(x);
-	_putchar(e);
-	_putchar(':');
-	}
-	}
+for (h = 0; h <= 23; h++)
+{
+for (m = 0; m <= 59; m++)
+{
+_putchar((h / 10) + '0');
+_putchar((h % 10) + '0');
+_putchar(':');
+_putchar((m / 10) + '0');
+_putchar((m % 10) + '0');
+_putchar('\n');
+}
+}
 }
 

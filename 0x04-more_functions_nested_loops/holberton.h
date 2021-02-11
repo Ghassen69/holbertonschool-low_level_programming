@@ -8,3 +8,4 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _isupper(int c);
+int _isdigit(int c);

@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
- * _isdigit - uppercase letters
- * Return: 0
+ * print_numbers - print numbers
  */
 void print_numbers(void)
 {

@@ -2,7 +2,7 @@
 /**
  * print_square - print square
  */
-void print_square(void)
+void print_square(int size)
 {
 int c;
 int k;

@@ -5,12 +5,15 @@
 void print_square(void)
 {
 int c;
-if (c >= 0; c++)
-{
+int k;
+if (size <= 0)
 _putchar('\n');
-}
-else
+for (k = 0 ; k < size ; k++)
+{
+for (c = 0 ; c < size ; c++)
 {
 _putchar('#');
+}
+_putchar('\n');
 }
 }

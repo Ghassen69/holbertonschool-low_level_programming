@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * print_square - print square
+ * @size : parameter
  */
 void print_square(int size)
 {

@@ -4,7 +4,7 @@
  * @a : parameter
  * @b : parameter
  */
-void swapt_int(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 int i;
 i  = *b;

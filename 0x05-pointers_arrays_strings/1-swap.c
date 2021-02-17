@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * swapt_int - uppercase letters
+ * swap_int - uppercase letters
  * @a : parameter
  * @b : parameter
  */

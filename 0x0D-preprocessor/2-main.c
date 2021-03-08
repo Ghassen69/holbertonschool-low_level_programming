@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
 * main - function that prints the name of it's executable file.
 * @void: void.

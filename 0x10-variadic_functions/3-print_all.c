@@ -1,50 +1,44 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+#include "my_functions.h"
 #include <stdarg.h>
 /**
-*print_all - function that prints anything.
-*@format: arg.
-*/
+ * print_all - function that prints anything.
+ * @format: format of the passed arguments
+ **/
 void print_all(const char * const format, ...)
 {
-unsigned int i = 0, length = 0;
-char *s, *p;
-va_list ap;
+	unsigned int i = 0, b = 0;
+	void (*fp)(va_list);
+	va_list list;
+	char *sep = "";
 
-	while (format[length] != '\0')
-	length++;
-	va_start(ap, format);
-		while (i < length)
+	type t[] = {
+		{"c", _printc},
+		{"i", _printi},
+		{"f", _printf},
+		{"s", _prints},
+		{NULL, NULL}
+	};
+
+	va_start(list, format);
+	while (format && format[i])
+	{
+		b = 0;
+		while (t[b].c != NULL)
 		{
-		p = ", ";
-			if (i >= length - 1)
-			p = "";
-		switch (format[i])
-		{
-			case 'c':
-				printf("%c%s", va_arg(ap, int),  p);
-				break;
-			case 'i':
-				printf("%i%s", va_arg(ap, int),  p);
-				break;
-			case 'f':
-				printf("%f%s", va_arg(ap, double),  p);
-				break;
-			case 's':
-				s = va_arg(ap, char*);
-					if (s == NULL)
-					{
-					s = "";
-					p = "";
-					}
-			printf("%s%s", s,  p);
-			break;
-				default:
-			p = "";
-			break;
+			if (t[b].c[0] == format[i])
+			{
+				printf("%s", sep);
+				fp = t[b].f;
+				fp(list);
+				sep = ", ";
+
 			}
-			i++;
+			b++;
 		}
-printf("\n");
-va_end(ap);
+		i++;
+
+	}
+	va_end(list);
+	printf("\n");
 }
